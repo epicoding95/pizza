@@ -1,35 +1,48 @@
+//back end
 function Pizza (size,toppings1,topping2, toppings3){
 this.size = size
 this.toppings1 = toppings1
 this.toppings2 = toppings2
 this.toppings3 = toppings3
+
 this.total =function(){
-
-  this.total
-  return ("your total is " this.total() ".")
+   var total = this.size + this.toppings1 + this.toppings2 + this.toppings3;
+  return total;
 }
 
-}
 
-var pizza2 = new pizza();
-pizza.total()
-var pizza3 = new pizza();
-pizza.total()
-var pizza4 = new pizza();
-pizza.total()
-pizza.prototype.total = function(total)
+};
 
 
 
-
+//front end
 
 $(document).ready(function(){
-  $("#yourOrder").submit(function(event){
-    event.preventDefault();
+  $("#YourOrder").submit(function(event){
 
 
-var size = $("input#Yoursize").val();
-var toppings1 = $("input#toppings1").val();
-var toppings2 = $("input#toppings2").val();
-var toppings3 = $("input#toppings3").val();
-var total = $("input#Yoursize").val(); + $("input#Yoursize").val(); +
+// debugger;
+var size = parseInt($("input#Yoursize").val());
+var toppings1 = parseInt($("input#toppings1").val());
+var toppings2 = parseInt($("input#toppings2").val());
+var toppings3 = parseInt($("input#toppings3").val());
+var total = parseInt($("input#Yoursize").val()); + parseInt($("input#toppings1").val()); + parseInt($("input#toppings2").val()); + parseInt($("input#toppings3").val());
+
+
+$("#output").text(total);
+event.preventDefault();
+
+
+  });
+});
+
+
+
+
+// var pizza2 = new pizza();
+// pizza.total()
+// var pizza3 = new pizza();
+// pizza.total()
+// var pizza4 = new pizza();
+// pizza.total()
+// pizza.prototype.total = function(total)
