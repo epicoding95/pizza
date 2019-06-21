@@ -1,36 +1,39 @@
 //back end
-function Pizza (size,toppings1,topping2, toppings3){
-this.size = size
-this.toppings1 = toppings1
-this.toppings2 = toppings2
-this.toppings3 = toppings3
-
-this.total =function(){
-   var total = this.size + this.toppings1 + this.toppings2 + this.toppings3;
-  return total;
+function Pizza (size,toppings1,toppings2,toppings3){
+this.size = size;
+this.toppings1 = toppings1;
+this.toppings2 = toppings2;
+this.toppings3 = toppings3;
 }
 
-
-};
-
+Pizza.prototype.total = function(){
+  var total = this.size + this.toppings1 + this.toppings2 + this.toppings3;
+  return total;
+}
 
 
 //front end
 
 $(document).ready(function(){
-  $("#YourOrder").submit(function(event){
+  $("form#YourOrder").submit(function(){
+    event.preventDefault();
+    var size = parseInt($("select#YourSize").val());
+    console.log(size);
+    var toppings1 = parseInt($("select#toppings1").val());
+    console.log(toppings1);
+    var toppings2 = parseInt($("select#toppings2").val());
+    var toppings3 = parseInt($("select#toppings3").val());
 
+
+var userPizza = new Pizza (size, toppings1, toppings2, toppings3, total);
+  var total = userPizza.total();
+console.log(userPizza.total);
 
 // debugger;
-var size = parseInt($("input#Yoursize").val());
-var toppings1 = parseInt($("input#toppings1").val());
-var toppings2 = parseInt($("input#toppings2").val());
-var toppings3 = parseInt($("input#toppings3").val());
-var total = parseInt($("input#Yoursize").val()); + parseInt($("input#toppings1").val()); + parseInt($("input#toppings2").val()); + parseInt($("input#toppings3").val());
 
 
-$("#output").text(total);
-event.preventDefault();
+
+$("#output").append(total);
 
 
   });
