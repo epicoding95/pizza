@@ -11,12 +11,28 @@
      <div class = "container">
        <div class = "jumbotron">
          <h1>Welcome to Kelar's pizza</h1>
-         <h3>BEST PIZZA IN THE WORLD</h3>
+         <h3>THE BEST PIZZA IN THE WORLD</h3>
 
        </div>
+
        <div class="row">
          <div class="col-md-10">
 
+         </div>
+         <div class="sidenav">
+           <a href="https://www.dominos.com/en/about-pizza/pizza-restaurant/">about us</a>
+           <br>
+           <a href="https://www.facebook.com/pg/Dominos/photos/">pizza images</a>
+           <br>
+           <a href="https://www.dominos.com/en/?utm_campaign=69796110|c|GG&utm_source=Google&utm_medium=p_search&utm_content=aud-44253621750:kwd-30590200885|69796110|22844051670&utm_term=%2Bdominos%20%2Blocations&matchtype=b&gclid=EAIaIQobChMI0ZqXpMv74gIVSXRgCh0PxQJJEAAYASAAEgKLK_D_BwE">locations</a>
+           <br>
+           <a href="">Don't contact us</a>
+           <br>
+
+           <div class="dropdown-container">
+
+           </div>
+           <a href="#contact"></a>
          </div>
          <div class="col-md-10">
 
@@ -25,7 +41,7 @@
                  <label for="size">Size of Pizza:</label>
                  <select class="form-control" id="YourSize">
                    <option value= "0">no pizza</option>
-                   <option value= "10">Small: $10.00</option>
+                   <option value= "$10">Small: $10.00</option>
                    <option value= "11">Medium: $11.00</option>
                    <option value= "12">Large: $12.00</option>
                    <option value= "100">Our special: $100.00</option>
@@ -33,37 +49,49 @@
                  <label for="toppings1">First Topping:</label>
                  <select class="form-control" id="toppings1">
                    <option value= "0">none</option>
-                   <option value= "2">Pepperoni +$1.00</option>
-                   <option value= "2">Sausage +$1.00</option>
-                   <option value= "2">Ham +$1.00</option>
-                   <option value= "2">Onions +$1.00</option>
-                   <option value= "2">Peppers +$1.00</option>
+                   <option value= "1">Pepperoni +$1.00</option>
+                   <option value= "1">Sausage +$1.00</option>
+                   <option value= "1">Ham +$1.00</option>
+                   <option value= "1">Onions +$1.00</option>
+                   <option value= "1">Peppers +$1.00</option>
 
                  </select>
                  <label for="toppings2">Second Topping:</label>
                  <select class="form-control" id="toppings2">
                    <option value= "0">none</option>
-                   <option value= "2">Pepperoni +$1.00</option>
-                   <option value= "2">Sausage +$1.00</option>
-                   <option value= "2">Ham +$1.00</option>
-                   <option value= "2">Onions +$1.00</option>
-                   <option value= "2">Peppers +1.00</option>
+                   <option value= "1">Pepperoni +$1.00</option>
+                   <option value= "1">Sausage +$1.00</option>
+                   <option value= "1">Ham +$1.00</option>
+                   <option value= "1">Onions +$1.00</option>
+                   <option value= "1">Peppers +1.00</option>
 
                  </select>
                  <label for="toppings3">Third Topping:</label>
                  <select class="form-control" id="toppings3">
                    <option value= "0">none</option>
-                   <option value= "2">Pepperoni +1.00</option>
-                   <option value= "2">Sausage +$1.00</option>
-                   <option value= "2">Ham +$1.00</option>
-                   <option value= "2">nions +$1.00</option>
-                   <option value= "2">Peppers
-                   +1.00</option>
+                   <option value= "1">Pepperoni +1.00</option>
+                   <option value= "1">Sausage +$1.00</option>
+                   <option value= "1">Ham +$1.00</option>
+                   <option value= "1">nions +$1.00</option>
+                   <option value= "1000000000">surprise
+                   +$10000000000000000.00</option>
                    </select>
-                   <!-- <div class="card bg-dark" id="button"> -->
+                   <br>
+                   <label for="delivery">pickup or delivery?</label>
+                   <select class="delivery" id="delivery">
+                     <option value= "0">Pick-up</option>
+                     <option value= "1">Delivery +$1.00</option>
+
+                   </select>
+                 <br>
+                 <br>
+                  <div class ="card bg-dark">
                     <button class="btn btn-outline-success" type="submit" name="submit" id="submit">submit!</button>
-                    <button class="btn btn-outline-warning" type="button" name="add another" id="addPizza">add another</button>
-                   <!-- </div> -->
+
+
+                    <button class="btn btn-outline-warning" type="button"
+                    value="Refresh Page" onClick="window.location.reload();" name="add another" id="addPizza">refresh Page</button>
+                  </div>
                  </form>
                  </div>
 
@@ -71,7 +99,7 @@
            </div>
 
          </div>
-         <ul id="output">
+         <H2 id="output"></H2>
 
       </ul>
            </div>
